@@ -1,6 +1,7 @@
 *{
   margin: 0;
   padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 /*-------------------------------------------
 header
@@ -15,7 +16,7 @@ header{
   z-index: 1;
 }
 header a{
-  margin: 0;
+ margin: 0;
   font-size: 22px;
   line-height: 64px;
   text-decoration: none;
@@ -248,15 +249,24 @@ profile
 #skill h3{
   padding-bottom :20px;
 }
+#skill h4{
+  display: inline;
+  border-bottom: 1px solid black;
+}
 .skill-content{
   width: 70%;
   border: 2px solid rgb(180, 178, 178);
   background: white;
   border-radius: 4px;
   padding: 20px;
-  margin: 20px auto;
 }
-
+.skill-items{
+  text-align: left;
+}
+.skill-items ul{
+  margin: 10px;
+  line-height: 1.5em;
+}
 /*-------------------------------------------
 ワーク
 -------------------------------------------*/
@@ -319,7 +329,7 @@ profile
 /*-------------------------------------------
 PC表示
 -------------------------------------------*/
-@media(min-width: 800px){
+@media(min-width: 750px){
 
 /* ----------------heder------------------ */
   .pc-menu{
@@ -329,12 +339,13 @@ PC表示
   .pc-menu ul{
     list-style: none;
     margin: 0;
-    padding-right: 32px;
     display: flex;
+    margin-right: 30px;
   }
   .pc-menu a{
+    font-size: 20px;
     display: block;
-    width: 80px;
+    width: 90px;
     line-height: 64px;
     font-weight: bold;
     text-align: center;
@@ -357,7 +368,8 @@ PC表示
 
 /* ----------------top img---------------- */
   #pic h1{
-    left: 50%;
+    left: 5%;
+    top: 55%;
     font-size: 60px;
   }
 /* -----------------profile -------------*/
@@ -406,12 +418,18 @@ PC表示
 
 /* ------------skill--------------*/
 
-.skill-flame{
+.skill-flame1{
+  width: 90%;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
 }
-.skill-box1,.skill-box2,.skill-box3{
-width: 25%;
+.skill-flame2{
+  width: 90%;
+  margin: 10px auto;
+  display: flex;
+}
+.skill-box{
+  margin: 0 5px;
 }
 
 /* ------------work--------------*/
