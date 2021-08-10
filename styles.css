@@ -28,6 +28,7 @@ header a:hover{
 }
 .sp-menu > .material-icons{
   padding-right: 32px;
+  margin: 0;
 }
 .pc-menu{
   display: none;
@@ -37,16 +38,14 @@ header a:hover{
   margin-left: auto;
 }
 .sp-menu #open{
-  font-size: 32px;
+  font-size: 30px;
   line-height: 64px;
   cursor: pointer;
 }
 .overlay{
   position: fixed;
   top: 0;
-  /* bottom: 0; */
   right: 0;
-  /* left: 0; */
   background: rgba(240, 237, 237, 0.95);
   text-align: center;
   padding-right: 16px;
@@ -107,7 +106,7 @@ top img
 -------------------------------------------*/
 #pic img{
   opacity: 0.9;
-  height: 600px;
+  height: 750px;
   width: 100%;
   object-fit: cover;
   vertical-align: middle;/* インライン要素がベースラインに配置されているため余白ができる */
@@ -119,14 +118,15 @@ top img
 #pic h1{
   display: block;
   position: absolute;
-  top: 300px;
-  left: 30%;
+  top: 50%;
+  left: 10%;
   color: white;
-  font-size: 50px;
+  font-size: 30px;
   font-weight: bold;
 }
 #pic h1 span{
   position: absolute;
+  margin-top: 10px;
   top: 105%;
 }
 
@@ -138,100 +138,34 @@ profile
   padding-bottom: 50px;
 }
 #profile h2{
-  padding: 50px 5px 0 5px;
+  padding: 70px 5px 0 5px;
   font-size: 30px;
   width: 110px;
   margin: 0 auto;
   border-bottom: 1px solid #333;
 }
-#my-pic {
+#profile p{
+  width: 80%;
+  margin: 0 auto;
+}
+.profile-img {
   margin: 50px 0 30px 0;
   width: 100%;
   text-align: center;
 }
-#my-pic img{
+.profile-img img{
   width: 200px;
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
 }
-#personal-info{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-#personal-info ul{
-  /* padding: 20px; */
-  list-style: none;
-}
-#personal-info ul li{
-  line-height: 30px;
-}
-
-/*-------------------------------------------
-
--------------------------------------------*/
-#profile-info p{
-  width: 80%;
-  text-align: left;
-  margin: 0 auto;
-  padding-bottom: 50px;
-}
-.profile-top{
-  position: relative;
-  width: 80%;
-  margin: 0px auto;
-  color: white;
-  font-size: 20px;
-}
-.profile-top img{
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  opacity: 0.8;
-  margin: 50px 0 20px;
-}
-.profile-top h3{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  margin: 0;
-  padding: 0;
-}
-
-/*-------------------------------------------
-転職理由
--------------------------------------------*/
-#profile-info .profile-reason{
-  background: rgb(0, 0, 0);
-  color: white;
-  text-align: center;
-}
-
-/*-------------------------------------------
-自己PR
--------------------------------------------*/
-#profile-info .profile-pr{
-  color: rgb(0, 0, 0);
-  background: white;
-  text-align: center;
-}
-/*-------------------------------------------
-キャリアプラン
--------------------------------------------*/
-#profile-info .profile-plan{
-  background: rgb(0, 0, 0);
-  color: white;
-  text-align: center;
-}
 /*-------------------------------------------
 スキル
 -------------------------------------------*/
 #skill{
-  background: lightgray;
+  background: rgb(214, 214, 214);
   text-align: center;
-  padding: 50px 0;
+  padding: 70px 0;
 }
 #skill h2{
   display: inline;
@@ -240,8 +174,8 @@ profile
   margin: 0 auto;
   border-bottom: 1px solid #333;
 }
-#skill > p{
-  width: 80%;
+#skill  p{
+  width: 85%;
   margin: 0 auto;
   text-align: left;
   padding: 50px 0 30px;
@@ -265,59 +199,173 @@ profile
   text-align: left;
 }
 .skill-items ul{
-  margin: 10px;
+  margin: 10px 0;
+  font-size: 14px;
   line-height: 1.5em;
-}
-.main-img{
-  width: 100%;
-  height: 300px;
-  margin-top: 20px;
-  object-fit: cover;
-  vertical-align: middle;
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 10px 20px;
 }
 /*-------------------------------------------
 ワーク
 -------------------------------------------*/
 #work{
+  background: linear-gradient(rgb(255, 255, 168),rgb(191, 255, 170));
   text-align: center;
-  padding: 50px 0;
+  padding: 70px 0;
 }
 #work h2{
   display: inline;
   font-size: 30px;
   width: 30%;
   margin: 0 auto;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid rgb(51, 51, 51);
 }
-#work > p{
-  width: 80%;
+#work p{
+  width: 70%;
+  text-align: left;
+  margin: 30px auto;
+}
+#work h3{
+  display: flex;
+  align-items: center;
+}
+#work h3::after,
+#work h3::before{
+  content: "";
+  height: 1px;
+  flex-grow: 1;
+  background-color: #666;
+}
+#work h3::after{
+  margin-right: 5%;
+}
+#work h3::before{
+  margin-left: 5%;
+}
+.copysite-items img{
+  width: 60%;
+  height: 150px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.603);
+}
+.copysite-items h4{
+  margin: 10px 0 30px;
+}
+.copysite-items img:hover{
+  cursor: pointer;
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.651);
+  transform: translate(-2px,-2px);
+  transition-duration: 0.3s;
+}
+/* ----------ワーク詳細-------------- */
+#mask{
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+#mask.hidden{
+  display: none;
+}
+.modal.hidden{
+  transition: 0.3s;
+  transform: translate(0, -1000px);
+}
+
+
+
+.modal{
+  background: rgb(235, 232, 232);
+  width: 60%;
+  height: 80%;
+  padding: 30px;
+  padding-bottom: 0;
+  position: fixed;
+  top: 10%;
+  left: 0;
+  right: 0;
   margin: 0 auto;
-  padding-top: 50px;
+  border: 1px solid black;
+  z-index: 2;
+  overflow-y: scroll;
+  transition: 0.5s;
+}
+.modal-items{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.modal-items img{
+  width: 90%;
+  margin: 30px 10px 0;
+  object-fit: cover;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.603);
+}
+.modal-items img:hover{
+  cursor: pointer;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.651);
+  transform: translate(-2px,-2px);
+  transition-duration: 0.3s;
+}
+.modal-items a{
+  font-size: 14px;
+  margin-top: 5px;
+}
+.modal-items a:hover{
+  opacity: 0.8;
+}
+.modal-contents h3{
+  margin: 0;
+  margin-bottom: 5px;
+}
+.modal-contents p{
+  margin: 0;
+  margin-bottom: 30px;
+}
+.lang-border{
+  display: flex;
+  align-items: center;
+}
+.lang-border::before,
+.lang-border::after{
+  content: "";
+  height: 1px;
+  flex-grow: 1;
+  background-color: #666;
+}
+.lang-border::before{
+  margin-right: 10px;
+}
+.lang-border::after{
+  margin-left: 10px;
+}
+.close{
+  width: 50%;
+}
+.material-icons{
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.material-icons:hover{
+  cursor: pointer;
+  color: yellow;
 }
 
-.work-items{
-  width: 80%;
-  border:1px solid blue;
-  padding: 20px;
-  margin: 20px auto;
-
-}
-.work-items h3{
-  margin-bottom: 20px;
-}
-.work-items ul{
-  list-style: none;
-}
-.work-items li a{
-  text-decoration: none;
-}
 
 /*-------------------------------------------
 お問い合わせ
 -------------------------------------------*/
 #contact{
   text-align: center;
-  padding: 50px 0;
+  padding: 70px 0 50px;
   background: lightgray;
 }
 #contact h2{
@@ -328,41 +376,80 @@ profile
   border-bottom: 1px solid #333;
 }
 #contact > p{
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
   text-align: left;
   padding: 50px 0 30px;
 }
-form .contact-table{
-  border-collapse: collapse;
-  width: 80%;
-  margin: 0 auto;
+
+#contact img{
+  width: 200px;
+  height: 200px;
+  background: white;
+  border-radius: 50%;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
-form .contact-item{
-  width: 30%;
+#contact button{
   text-align: center;
-  border: 2px solid rgb(180, 178, 178);
+  font-weight: bold;
+  font-size: 16px;
+  width: 120px;
+  height: 40px;
+  background: blue;
+  color: white;
+  border: white 2px solid;
+  border-radius: 20px;
 }
-form .contact-body{
-  text-align: left;
-  width: 70%;
+#contact button a{
+  text-decoration: none;
+  color: white;
+}
+#contact button:hover{
+  background: red;
+  cursor: pointer;
+}
+#contact img:hover{
+  background: yellow;
+  cursor: pointer;
+}
+/* ----------最後の言葉-------------- */
+#finish{
+  text-align: center;
+  background: rgba(4, 163, 155, 0.473);
+  height: 500px;
+  padding-bottom: 20px;
+}
+#finish h2{
+  padding-top: 230px;
+  padding-bottom: 130px;
+  color: white;
+}
+#finish .material-icons{
+  color: black;
   padding: 10px;
-  border: 2px solid rgb(180, 178, 178);
+  background: white;
+  font-size: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 auto;
+
 }
-form input{
-  border: none;
-  border-radius: 5px;
-  width: 90%;
-  height: 30px;
-  margin-left: 10px;
+#finish .material-icons:hover{
+  background: yellow;
 }
-form textarea{
-  border: none;
-  width: 90%;
-  height: 120px;
-  margin-left: 10px;
-  border-radius: 5px;
+#finish a{
+  text-decoration: none;
 }
+#finish img{
+  width: 100%;
+  height: 300px;
+}
+
+
+
+
 /*-------------------------------------------
 PC表示
 -------------------------------------------*/
@@ -406,8 +493,11 @@ PC表示
 /* ----------------top img---------------- */
   #pic h1{
     left: 5%;
-    top: 55%;
+    top: 65%;
     font-size: 60px;
+  }
+  #pic img{
+    height: 850px;
   }
 /* -----------------profile -------------*/
 
@@ -416,43 +506,18 @@ PC表示
     margin: 50px;
     padding: 0 20px;
   }
-  #my-pic {
+  .profile-img {
     margin: 0;
     width: 450px;
   }
-  #my-pic img{
+  .profile-img img{
     width: 250px;
     height: 250px;
     margin: 0 30px;
   }
-  #personal-info{
-    font-size: 20px;
-    padding:  0 20px;
+  #profile p{
+    padding: 40px 0;
   }
-
-/* 転職理由・自己PR・キャリアプラン */
-#profile-info .wrap{
-  display: flex;
-  padding: 50px;
-  height: 100%;
-}
-.profile-top{
-  font-size: 30px;
-}
-.profile-top img{
-  width: 100%;
-  height: 250px;
-  margin: 0;
-}
-.profile-top h3{
-  position: absolute;
-  top: 125px;
-  left: 50%;
-}
-#profile-info p{
-  padding-left: 20px;
-}
-
 /* ------------skill--------------*/
 
 .skill-flame1{
@@ -470,35 +535,32 @@ PC表示
 }
 
 /* ------------work--------------*/
-.work-flame{
+.copysite-items{
   display: flex;
-  justify-content: space-between;
-  width: 90%;
+  justify-content: center;
+  width: 70%;
+  font-size: 12px;
   margin: 0 auto;
 }
-.work-box1,.work-box2{
-  width: 42%;
+.copysite-items img{
+  width: 250px;
+  height: 180px;
+}
+.copysite-items .item2 img{
+  margin: 0 20px;
+}
+.modal{
+  width: 50%;
+}
+#work h3::after,
+#work h3::before{
+  width: 30%;
 }
 /* ------------contact--------------*/
-/* form{
-  display: flex;
+#contact,
+#finish{
+  height: 600px;
 }
-form label{
-  width: 200px;
-}
-form input{
-  flex: 1;
-  width: 100%;
-  height: 30px;
-}
-form textarea{
-  width: 500px;
-  height: 100px;
-}
-form .contact-form{
-  width: 1;
-} */
-
 
 }
 
