@@ -314,6 +314,7 @@ profile
   transition-duration: 0.3s;
 }
 .modal-items a{
+  display: block;
   font-size: 14px;
   margin-top: 5px;
 }
